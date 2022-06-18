@@ -1,0 +1,682 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0",
+      "title": "college management",
+      "contact": {}
+    },
+    "host": "localhost:3000",
+    "basePath": "/api/student",
+    "securityDefinitions": {},
+    "schemes": ["http"],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/register": {
+        "post": {
+          "summary": "Register",
+          "tags": [
+            "Student"
+          ],
+          "operationId": "Register",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/RegisterRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/login": {
+        "post": {
+          "summary": "Login",
+          "tags": [
+            "Student"
+          ],
+          "operationId": "Login",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/LoginRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/activatestudent": {
+        "post": {
+          "summary": "Active Student",
+          "tags": [
+            "Student"
+          ],
+          "operationId": "ActiveStudent",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/ActiveStudentRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/add": {
+        "post": {
+          "summary": "Post Student",
+          "tags": [
+            "Student"
+          ],
+          "operationId": "PostStudent",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/PostStudentRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/forgetPassword": {
+        "post": {
+          "summary": "Forget Password",
+          "tags": [
+            "Student"
+          ],
+          "operationId": "ForgetPassword",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/ForgetPasswordRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/verifyOtpCode": {
+        "post": {
+          "summary": "verify Otp Code",
+          "tags": [
+            "Student"
+          ],
+          "operationId": "verifyOtpCode",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/verifyOtpCodeRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/changePassword": {
+        "post": {
+          "summary": "changePassword",
+          "tags": [
+            "Student"
+          ],
+          "operationId": "changePassword",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/changePasswordRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/getById": {
+        "get": {
+          "summary": "Get By ID Student",
+          "tags": [
+            "Student"
+          ],
+          "operationId": "GetByIDStudent",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "id",
+              "in": "query",
+              "required": true,
+              "type": "string",
+              "description": ""
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/delete": {
+        "delete": {
+          "summary": "Delete Student",
+          "tags": [
+            "Student"
+          ],
+          "operationId": "DeleteStudent",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/get": {
+        "get": {
+          "summary": "Student Get",
+          "tags": [
+            "Student"
+          ],
+          "operationId": "StudentGet",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      },
+      "/update": {
+        "post": {
+          "summary": "Update Student",
+          "tags": [
+            "Student"
+          ],
+          "operationId": "UpdateStudent",
+          "deprecated": false,
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required": false,
+              "default": "Bearer {token}",
+              "type": "string"
+            },
+            {
+              "name": "Body",
+              "in": "body",
+              "required": true,
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/UpdateStudentRequest"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "headers": {}
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "RegisterRequest": {
+        "title": "RegisterRequest",
+        "example": {
+          "email": "suhagiyadivyesh1515@gmail.com",
+          "password": "divyesh@123",
+          "confirmPassword": "divyesh@123"
+        },
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "confirmPassword": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "email",
+          "password",
+          "confirmPassword"
+        ]
+      },
+      "LoginRequest": {
+        "title": "LoginRequest",
+        "example": {
+          "email": "suhagiyadivyesh7600@gmail.com",
+          "password": "divyesh@123"
+        },
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ]
+      },
+      "ActiveStudentRequest": {
+        "title": "ActiveStudentRequest",
+        "example": {
+          "email": "suhagiyadivyesh7600@gmail.com",
+          "accountActivationCode": "335206"
+        },
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "accountActivationCode": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "email",
+          "accountActivationCode"
+        ]
+      },
+      "PostStudentRequest": {
+        "title": "PostStudentRequest",
+        "example": {
+          "firstName": "Divyesh",
+          "lastName": "Patel",
+          "middleName": "Suhagiya",
+          "idNumber": 250,
+          "address": "80,gajanand",
+          "pincode": 395010,
+          "mobile": 1362752745,
+          "aadharNumber": 35463427328,
+          "email": "suhagiyadivyesh7600@gmail.com"
+        },
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "middleName": {
+            "type": "string"
+          },
+          "idNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "address": {
+            "type": "string"
+          },
+          "pincode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mobile": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "aadharNumber": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "email": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "firstName",
+          "lastName",
+          "middleName",
+          "idNumber",
+          "address",
+          "pincode",
+          "mobile",
+          "aadharNumber",
+          "email"
+        ]
+      },
+      "ForgetPasswordRequest": {
+        "title": "ForgetPasswordRequest",
+        "example": {
+          "email": "suhagiyadivyesh7600@gmail.com"
+        },
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "email"
+        ]
+      },
+      "verifyOtpCodeRequest": {
+        "title": "verifyOtpCodeRequest",
+        "example": {
+          "email": "suhagiyadivyesh7600@gmail.com",
+          "otpCode": "162813",
+          "newPassword": "divyesh@new",
+          "confirmPassword": "divyesh@new"
+        },
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "otpCode": {
+            "type": "string"
+          },
+          "newPassword": {
+            "type": "string"
+          },
+          "confirmPassword": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "email",
+          "otpCode",
+          "newPassword",
+          "confirmPassword"
+        ]
+      },
+      "changePasswordRequest": {
+        "title": "changePasswordRequest",
+        "example": {
+          "email": "suhagiyadivyesh7600@gmail.com",
+          "oldPassword": "divyesh@new",
+          "newPassword": "divyesh@123",
+          "confirmPassword": "divyesh@123"
+        },
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "oldPassword": {
+            "type": "string"
+          },
+          "newPassword": {
+            "type": "string"
+          },
+          "confirmPassword": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "email",
+          "oldPassword",
+          "newPassword",
+          "confirmPassword"
+        ]
+      },
+      "UpdateStudentRequest": {
+        "title": "UpdateStudentRequest",
+        "example": {
+          "id": "62ad59004b05c7d553c2398b",
+          "firstName": "Divyesh new",
+          "lastName": "Patel",
+          "middleName": "Suhagiya",
+          "idNumber": 255,
+          "address": "80,gajanand",
+          "pincode": 395010,
+          "mobile": 1362752745,
+          "aadharNumber": 35463427328,
+          "email": "suhagiyadivyesh7600@gmail.com"
+        },
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "middleName": {
+            "type": "string"
+          },
+          "idNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "address": {
+            "type": "string"
+          },
+          "pincode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mobile": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "aadharNumber": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "email": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "firstName",
+          "lastName",
+          "middleName",
+          "idNumber",
+          "address",
+          "pincode",
+          "mobile",
+          "aadharNumber",
+          "email"
+        ]
+      }
+    },
+    "security": [
+      {
+        "bearer": []
+      }
+    ],
+    "tags": [
+      {
+        "name": "Student"
+      }
+    ]
+  }
